@@ -5,21 +5,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="d534929c-ed64-481a-b7b5-a8c9453fba7e" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/gradle.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build.gradle" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gradle/wrapper/gradle-wrapper.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gradle/wrapper/gradle-wrapper.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gradlew" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gradlew.bat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/settings.gradle" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/AutomatasCelulares/CellBehaviour.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/AutomatasCelulares/Game.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/AutomatasCelulares/Main.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/AutomatasCelulares/MouseListener.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/AutomatasCelulares/Mode.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/AutomatasCelulares/Game.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/AutomatasCelulares/Game.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/AutomatasCelulares/MouseListener.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/AutomatasCelulares/MouseListener.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -35,11 +24,15 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Class" />
+        <option value="Enum" />
       </list>
     </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
   </component>
   <component name="ProjectId" id="2NyD1fbHYcB8zLvYQzMlDdobRoA" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
@@ -102,6 +95,8 @@
       <workItem from="1680884099451" duration="1843000" />
       <workItem from="1680966472467" duration="799000" />
       <workItem from="1681117637829" duration="1006000" />
+      <workItem from="1681211612725" duration="5000" />
+      <workItem from="1681831199079" duration="503000" />
     </task>
     <servers />
   </component>

@@ -10,12 +10,11 @@ public class Game extends JPanel implements Runnable{
     private static final long NANOS_IN_SECOND = 1_000_000_000;
     private final int width;
     private final int height;
-    private Thread gameThread;
-    private double targetFps;
-    private int cellWidth;
-    private int cellHeight;
-    private int numCols;
-    private int numRows;
+    private final double targetFps;
+    private final int cellWidth;
+    private final int cellHeight;
+    private final int numCols;
+    private final int numRows;
 
     // Defining the objects
     private CellBehaviour cellBehaviour;
@@ -44,7 +43,7 @@ public class Game extends JPanel implements Runnable{
 
     // Method to start the game thread
     public void startThread() {
-        gameThread = new Thread(this);
+        Thread gameThread = new Thread(this);
         gameThread.start();
     }
 
@@ -96,21 +95,21 @@ public class Game extends JPanel implements Runnable{
      * Processes the mouse input and changes the cell behaviour accordingly
      */
     public void processInput() {
-        // The mouse position is read
-        int x = MouseInfo.getPointerInfo().getLocation().x - getLocationOnScreen().x;
-        int y = MouseInfo.getPointerInfo().getLocation().y - getLocationOnScreen().y;
+        Mode mode = mouseListener.mode;
 
-        // If the mouse is being pressed, the coordinates define the cell that will be changed
-        if (x >= 0 && x < width && y >= 0 && y < height) {
-            if (mouseListener.x >= 0 || mouseListener.y >= 0) {
-                //Set painting state to true
-                isPainting = true;
-                // Paint the cell
+        if (mode != Mode.NONE) {
+            isPainting = true;
+            int x = MouseInfo.getPointerInfo().getLocation().x - getLocationOnScreen().x;
+            int y = MouseInfo.getPointerInfo().getLocation().y - getLocationOnScreen().y;
+
+            if (mode == Mode.INSERT) {
                 cellBehaviour.setCellState(x / cellWidth, y / cellHeight, true);
-            } else{
-                // If the mouse is not being pressed, the painting state is set to false
-                isPainting = false;
+            } else if (mode == Mode.DELETE) {
+                cellBehaviour.setCellState(x / cellWidth, y / cellHeight, false);
             }
+        } else {
+            // If the mouse is not being pressed, the painting state is set to false
+            isPainting = false;
         }
     }
 
