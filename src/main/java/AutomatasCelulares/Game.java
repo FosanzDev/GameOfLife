@@ -75,8 +75,8 @@ public class Game extends JPanel implements Runnable{
         g2.setColor(Color.WHITE);
         // The grid is drawn
         drawGrid(g2);
-        // When the grid is being drawn, the game is paused
-        if (!isPainting){
+        // When the grid is being drawn or the game is paused, the cells are not updated
+        if (!isPainting && mouseListener.paused) {
             cellBehaviour.processNextGeneration();
         }
 
@@ -95,13 +95,17 @@ public class Game extends JPanel implements Runnable{
      * Processes the mouse input and changes the cell behaviour accordingly
      */
     public void processInput() {
+        // Reading the mouse input
         Mode mode = mouseListener.mode;
 
+        // If the mouse is being pressed, the painting state is set to true
         if (mode != Mode.NONE) {
+            // The mouse position is read
             isPainting = true;
             int x = MouseInfo.getPointerInfo().getLocation().x - getLocationOnScreen().x;
             int y = MouseInfo.getPointerInfo().getLocation().y - getLocationOnScreen().y;
 
+            // The cell behaviour is changed according to the mouse input
             if (mode == Mode.INSERT) {
                 cellBehaviour.setCellState(x / cellWidth, y / cellHeight, true);
             } else if (mode == Mode.DELETE) {

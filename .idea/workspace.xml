@@ -4,8 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="d534929c-ed64-481a-b7b5-a8c9453fba7e" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/AutomatasCelulares/Mode.java" afterDir="false" />
+    <list default="true" id="d534929c-ed64-481a-b7b5-a8c9453fba7e" name="Changes" comment="Added 'Delete cell' with right click&#10;&#10;Now right-clicking pauses the simulation and sets cells to false">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/AutomatasCelulares/Game.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/AutomatasCelulares/Game.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/AutomatasCelulares/MouseListener.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/AutomatasCelulares/MouseListener.java" afterDir="false" />
@@ -96,11 +95,23 @@
       <workItem from="1680966472467" duration="799000" />
       <workItem from="1681117637829" duration="1006000" />
       <workItem from="1681211612725" duration="5000" />
-      <workItem from="1681831199079" duration="503000" />
+      <workItem from="1681831199079" duration="1529000" />
     </task>
+    <task id="LOCAL-00001" summary="Added 'Delete cell' with right click&#10;&#10;Now right-clicking pauses the simulation and sets cells to false">
+      <created>1681831841897</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1681831841897</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Added 'Delete cell' with right click&#10;&#10;Now right-clicking pauses the simulation and sets cells to false" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added 'Delete cell' with right click&#10;&#10;Now right-clicking pauses the simulation and sets cells to false" />
   </component>
 </project>

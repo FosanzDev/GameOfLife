@@ -8,6 +8,7 @@ public class MouseListener implements java.awt.event.MouseListener{
     int x;
     int y;
     Mode mode;
+    boolean paused = false;
 
     // Constructor sets the initial position of the mouse to -1 (outside the grid)
     public MouseListener() {
@@ -23,10 +24,17 @@ public class MouseListener implements java.awt.event.MouseListener{
     // When the mouse is pressed, the position is stored
     @Override
     public void mousePressed(MouseEvent e) {
+        // If the left mouse button is pressed, the mode is set to INSERT
         if (e.getButton() == MouseEvent.BUTTON1) {
             this.mode = Mode.INSERT;
+
+        // If the right mouse button is pressed, the mode is set to DELETE
         } else if (e.getButton() == MouseEvent.BUTTON3) {
             this.mode = Mode.DELETE;
+
+        // If the middle mouse button is pressed, the game is paused or unpaused
+        } else if (e.getButton() == MouseEvent.BUTTON2){
+            this.paused = !this.paused;
         }
         x = e.getX();
         y = e.getY();
@@ -37,7 +45,11 @@ public class MouseListener implements java.awt.event.MouseListener{
     public void mouseReleased(MouseEvent e) {
         x = -1;
         y = -1;
-        mode = Mode.NONE;
+        // If the left or right mouse button is released, the mode is set to NONE
+        if (e.getButton() == MouseEvent.BUTTON1 || e.getButton() == MouseEvent.BUTTON3){
+            this.mode = Mode.NONE;
+        }
+
     }
 
     @Override
